@@ -8,10 +8,10 @@
     opacity: 0;
     pointer-events: none;
     z-index: 2;
-    animation: opacify 1s 5s forwards;
+    animation: opacify 1s 3s forwards;
 
     h2 {
-        @extend %glitchText;
+        @extend %glitch-infinite;
         position: absolute;
         top: 50%;
         text-align: center;
@@ -47,7 +47,7 @@
         transition: transform .4s;
 
         li {
-            @extend %glitchText;
+            @extend %glitch;
             line-height: 3 * $unit - 2 * $linkPadding;
             margin-bottom: $unit;
             width: 100%;
@@ -116,7 +116,7 @@
         transition: top .4s;
 
         .close {
-            @extend %glitchText;
+            @extend %glitch-infinite;
             position: absolute;
             top: 6 * $unit;
             right: 6 * $unit;
@@ -136,7 +136,7 @@
             margin: 0;
 
             li {
-                @extend %glitchText;
+                @extend %glitch-infinite;
                 display: inline-block;
                 margin: $unit;
                 font-size: 2.5em;

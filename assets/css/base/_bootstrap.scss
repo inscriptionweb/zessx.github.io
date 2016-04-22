@@ -47,12 +47,28 @@ body {
 }
 
 /* Source: http://codepen.io/bulby97/details/fcvay/ */
-%glitchText {
+%glitch {
     &:hover {
-        animation: glitchText 2s infinite;
+        animation: glitch .2s;
     }
 }
-@keyframes glitchText {
+%glitch-infinite {
+    &:hover {
+        animation: glitch-infinite 2s infinite;
+    }
+}
+@keyframes glitch {
+    0% {
+        text-shadow: 3px 0 0 red, -3px 0 0 blue;
+    }
+    50% {
+        text-shadow: 2px 0 0 red, -2px 0 0 lime;
+    }
+    100% {
+        text-shadow: -3px 0 0 blue, 3px 0 0 lime;
+    }
+}
+@keyframes glitch-infinite {
     0%, 4%, 51%, 55%, 73%, 76% {
         text-shadow: 3px 0 0 red, -3px 0 0 blue;
     }
